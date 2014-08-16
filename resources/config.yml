@@ -1,0 +1,6 @@
+# Settings for the 'expworld' command.
+expworld:
+  # default execution time in milliseconds which is used in one tick to expand the world.
+  time_in_tick: 10
+  # default interval in second to send a message with progress information.
+  message_interval: 10

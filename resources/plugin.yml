@@ -1,0 +1,38 @@
+name: 'XGME-ServerToolkit'
+main: de.xgme.mc.toolkit.ToolkitPlugin
+version: 0.1
+
+author: JojOatXGME
+authors: [XGME, JojOatXGME]
+website: http://xgme.de/
+description: 'A plugin with various unrelated commands.'
+prefix: 'XGNE Toolkit'
+
+load: POSTWORLD
+database: false
+
+commands:
+  xgme-toolkit-expworld:
+    description: "Complete world generation in given region."
+    aliases: [expworld]
+    permission: xgme.toolkit.expworld
+    usage: |
+      Usage: /<command> [options] <radius> (<world>|me)
+      Available Options: --square                          -s
+                         --execution-time-per-tick <time>  -e <time>
+                         --message-interval <interval>     -m <interval>
+  xgme-toolkit-stop:
+    description: "Stops running tasks of this plug-in."
+    aliases: [toolkit-stop]
+    permission: xgme.toolkit.stop
+    usage: |
+      Usage: /<command> [tool]
+      Availavle Tools: expworld
+
+permissions:
+  xgme.toolkit.expworld:
+    description: Allows you to use the 'expworld' command.
+    default: op
+  xgme.toolkit.stop:
+    description: Allows you to use the 'toolkit-stop' command.
+    default: op
